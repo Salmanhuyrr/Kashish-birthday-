@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7eadc">
+  <title>Happy Birthday Kashish ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="hearts"></div>
+  <div id="sparkles"></div>
+
+  <!-- 01 — COVER -->
+  <section class="page cover" id="home">
+    <div class="cover-decor decor-star s1">★</div>
+    <div class="cover-decor decor-star s2">★</div>
+    <div class="cover-decor decor-star s3">★</div>
+    <div class="cover-decor decor-flower">✿</div>
+
+    <div class="cover-content">
+      <h1>Birthday</h1>
+      <div class="script">Website</div>
+      <p class="small-script">made with love, just for Kashish ♡</p>
+      <button class="primary-btn" onclick="goTo('gifts')">OPEN YOUR SURPRISE</button>
+    </div>
+  </section>
+
+  <!-- 02 — THREE GIFTS -->
+  <section class="page gifts-page" id="gifts">
+    <p class="eyebrow">For you, always</p>
+    <h2>Three Little Gifts</h2>
+    <div class="gold-line"></div>
+
+    <div class="gift-grid">
+      <button class="gift-card" onclick="openLetter()">
+        <div class="gift-icon envelope">💌</div>
+        <h3>A Letter</h3>
+        <p>Words from the heart</p>
+      </button>
+
+      <button class="gift-card" onclick="openRoses()">
+        <div class="gift-icon">💐</div>
+        <h3>Fresh Roses</h3>
+        <p>A bouquet, just for you</p>
+      </button>
+
+      <button class="gift-card" onclick="openSurprise()">
+        <div class="gift-icon">🎁</div>
+        <h3>A Surprise</h3>
+        <p>Tied with a gold ribbon</p>
+      </button>
+    </div>
+
+    <button class="secondary-btn" onclick="goTo('accept')">CONTINUE</button>
+  </section>
+
+  <!-- 03 — LETTER -->
+  <section class="page letter-page" id="letter">
+    <div class="modal-card">
+      <div class="close" onclick="closeOverlay()">×</div>
+      <div class="heart-icon">❤️</div>
+      <h2>A Letter</h2>
+      <p class="script subtitle">Words from the heart</p>
+      <div class="letter-text">
+        <p>Happy Birthday to my favorite person ❤️</p>
+        <p>You make my life so much more beautiful just by being in it.</p>
+        <p>I'm so lucky to have you. 🥹💕</p>
+        <p>May you always smile, stay happy, and get everything your heart wishes for.</p>
+        <p class="script end-line">Love you so much! 🫶🏻💗</p>
+      </div>
+      <button class="secondary-btn" onclick="closeOverlay()">BACK</button>
+    </div>
+  </section>
+
+  <!-- 04 — ROSES -->
+  <section class="page rose-page" id="roses">
+    <div class="modal-card">
+      <div class="close" onclick="closeOverlay()">×</div>
+      <div class="rose-bouquet">💐</div>
+      <h2>Fresh Roses</h2>
+      <p>A bouquet, just for you</p>
+      <p class="script rose-note">Because you deserve all the pretty things. 🌹</p>
+      <button class="secondary-btn" onclick="closeOverlay()">BACK</button>
+    </div>
+  </section>
+
+  <!-- 05 — SURPRISE -->
+  <section class="page surprise-page" id="surprise">
+    <div class="modal-card">
+      <div class="close" onclick="closeOverlay()">×</div>
+      <div class="gift-big">🎁</div>
+      <h2>A Surprise</h2>
+      <p>Tied with gold ribbon</p>
+      <p class="script rose-note">Something small, but chosen with a very big heart. ❤️</p>
+      <button class="secondary-btn" onclick="closeOverlay()">BACK</button>
+    </div>
+  </section>
+
+  <!-- 06 — ACCEPT -->
+  <section class="page accept-page" id="accept">
+    <p class="eyebrow">Before we continue</p>
+    <h2>Please Accept My Gift</h2>
+    <div class="heart-icon">❤️</div>
+    <div class="gold-line"></div>
+
+    <div class="choice-row">
+      <button class="primary-btn" onclick="acceptGift()">YES</button>
+      <button class="no-btn" id="noBtn" onclick="moveNo()">NO</button>
+    </div>
+    <p id="acceptMessage" class="script accept-message"></p>
+  </section>
+
+  <!-- 07 — MEMORIES -->
+  <section class="page memories-page" id="memories">
+    <p class="eyebrow">A few favorite moments</p>
+    <h2>Our Memories</h2>
+    <div class="gold-line"></div>
+
+    <div class="memory-list">
+      <article class="memory-card" onclick="showMemory('memory1.jpg','You make every ordinary moment feel unforgettable. ❤️')">
+        <img src="assets/memory1.jpg" alt="Memory 1" onerror="this.src='assets/placeholder.svg'">
+        <p>"You make every ordinary moment feel unforgettable. ❤️"</p>
+      </article>
+
+      <article class="memory-card" onclick="showMemory('memory2.jpg','You’re not just my love, you’re my favorite part of every day. ❤️')">
+        <img src="assets/memory2.jpg" alt="Memory 2" onerror="this.src='assets/placeholder.svg'">
+        <p>"You’re not just my love, you’re my favorite part of every day. ❤️"</p>
+      </article>
+
+      <article class="memory-card" onclick="showMemory('memory3.jpg','If I could gift you one thing forever, it would be every reason to smile. ❤️')">
+        <img src="assets/memory3.jpg" alt="Memory 3" onerror="this.src='assets/placeholder.svg'">
+        <p>"If I could gift you one thing forever, it would be every reason to smile. ❤️"</p>
+      </article>
+    </div>
+
+    <button class="secondary-btn" onclick="goTo('birthday')">CONTINUE</button>
+  </section>
+
+  <!-- MEMORY MODAL -->
+  <div class="memory-modal" id="memoryModal" onclick="closeMemory(event)">
+    <div class="memory-modal-card" onclick="event.stopPropagation()">
+      <button class="modal-x" onclick="closeMemory()">×</button>
+      <img id="modalImage" src="" alt="Memory">
+      <p id="modalCaption"></p>
+    </div>
+  </div>
+
+  <!-- 08 — CAKE -->
+  <section class="page birthday-page" id="birthday">
+    <p class="eyebrow">A little something for</p>
+    <div class="balloons">●　●　●　●　●</div>
+
+    <div class="cake">
+      <div class="candle">❤️<span></span></div>
+      <div class="cake-top"></div>
+      <div class="cake-mid"></div>
+      <div class="cake-bottom"></div>
+    </div>
+
+    <h2>Happy Birthday 🎉</h2>
+    <button class="secondary-btn" onclick="goTo('final')">NEXT</button>
+  </section>
+
+  <!-- 09 — FINAL -->
+  <section class="page final-page" id="final">
+    <div class="final-content">
+      <div class="final-heart">❤️</div>
+      <h1>I Love You</h1>
+      <h2>🎂 Happy Birthday, My love 🎂</h2>
+      <p class="script">Forever grateful that you are in my life.</p>
+      <div class="final-name">Kashish ♡</div>
+      <button class="primary-btn" onclick="goTo('home')">REPLAY</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
