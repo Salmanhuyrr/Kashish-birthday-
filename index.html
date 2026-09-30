@@ -210,3 +210,431 @@
             <p>
                 I'm so lucky to have you. 🥹💕
             </p>
+<p>
+                May you always smile, stay happy,
+                and get everything your heart wishes for.
+            </p>
+
+            <p class="script end-line">
+                Love you so much! 🫶🏻💗
+            </p>
+
+        </div>
+
+
+        <button
+            class="secondary-btn"
+            onclick="closeOverlay()">
+
+            BACK
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     4. ROSES
+===================================================== -->
+
+<section
+    class="page rose-page"
+    id="roses">
+
+    <div class="modal-card">
+
+        <button
+            class="close"
+            onclick="closeOverlay()">
+            ×
+        </button>
+
+
+        <div class="rose-bouquet">
+            💐
+        </div>
+
+        <h2>
+            Fresh Roses
+        </h2>
+
+        <p>
+            A bouquet, just for you
+        </p>
+
+        <p class="script rose-note">
+            Because you deserve all the pretty things. 🌹
+        </p>
+
+
+        <button
+            class="secondary-btn"
+            onclick="closeOverlay()">
+
+            BACK
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     5. SURPRISE
+===================================================== -->
+
+<section
+    class="page surprise-page"
+    id="surprise">
+
+    <div class="modal-card">
+
+        <button
+            class="close"
+            onclick="closeOverlay()">
+            ×
+        </button>
+
+
+        <div class="gift-big">
+            🎁
+        </div>
+
+        <h2>
+            A Surprise
+        </h2>
+
+        <p>
+            Tied with gold ribbon
+        </p>
+
+        <p class="script rose-note">
+            Something small,
+            but chosen with a very big heart. ❤️
+        </p>
+
+
+        <button
+            class="secondary-btn"
+            onclick="closeOverlay()">
+
+            BACK
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     6. ACCEPT GIFT
+===================================================== -->
+
+<section
+    class="page accept-page"
+    id="accept">
+
+    <p class="eyebrow">
+        Before we continue
+    </p>
+
+    <h2>
+        Please Accept My Gift
+    </h2>
+
+    <div class="heart-icon">
+        ❤️
+    </div>
+
+    <div class="gold-line"></div>
+
+
+    <div class="choice-row">
+
+        <button
+            class="primary-btn"
+            onclick="acceptGift()">
+
+            YES
+
+        </button>
+
+
+        <button
+            class="no-btn"
+            id="noBtn"
+            onclick="moveNo()">
+
+            NO
+
+        </button>
+
+    </div>
+
+
+    <p
+        id="acceptMessage"
+        class="script accept-message">
+    </p>
+
+</section>
+
+
+
+<!-- =====================================================
+     7. MEMORIES
+===================================================== -->
+
+<section
+    class="page memories-page"
+    id="memories">
+
+    <p class="eyebrow">
+        A few favorite moments
+    </p>
+
+    <h2>
+        Our Memories
+    </h2>
+
+    <div class="gold-line"></div>
+
+
+    <div class="memory-list">
+
+
+        <!-- MEMORY 1 -->
+
+        <article
+            class="memory-card"
+            onclick="showMemory(
+                './Assets/memory1.jpg',
+                'You make every ordinary moment feel unforgettable. ❤️'
+            )">
+
+            <img
+                src="./Assets/memory1.jpg"
+                alt="Memory 1"
+            >
+
+            <p>
+                "You make every ordinary moment
+                feel unforgettable. ❤️"
+            </p>
+
+        </article>
+
+
+
+        <!-- MEMORY 2 -->
+
+        <article
+            class="memory-card"
+            onclick="showMemory(
+                './Assets/memory2.jpg',
+                'You’re not just my love, you’re my favorite part of every day. ❤️'
+            )">
+
+            <img
+                src="./Assets/memory2.jpg"
+                alt="Memory 2"
+            >
+        <p>
+                "You’re not just my love,
+                you’re my favorite part of every day. ❤️"
+            </p>
+
+        </article>
+
+
+
+        <!-- MEMORY 3 -->
+
+        <article
+            class="memory-card"
+            onclick="showMemory(
+                './Assets/memory3.jpg',
+                'If I could gift you one thing forever, it would be every reason to smile. ❤️'
+            )">
+
+            <img
+                src="./Assets/memory3.jpg"
+                alt="Memory 3"
+            >
+
+            <p>
+                "If I could gift you one thing forever,
+                it would be every reason to smile. ❤️"
+            </p>
+
+        </article>
+
+    </div>
+
+
+    <button
+        class="secondary-btn"
+        onclick="goTo('birthday')">
+
+        CONTINUE
+
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     MEMORY POPUP
+===================================================== -->
+
+<div
+    class="memory-modal"
+    id="memoryModal"
+    onclick="closeMemory(event)">
+
+    <div
+        class="memory-modal-card"
+        onclick="event.stopPropagation()">
+
+
+        <button
+            class="modal-x"
+            onclick="closeMemory()">
+
+            ×
+
+        </button>
+
+
+        <img
+            id="modalImage"
+            src=""
+            alt="Memory"
+        >
+
+
+        <p
+            id="modalCaption">
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     8. BIRTHDAY CAKE
+===================================================== -->
+
+<section
+    class="page birthday-page"
+    id="birthday">
+
+    <p class="eyebrow">
+        A little something for
+    </p>
+
+
+    <div class="balloons">
+        🎈 🎈 🎈 🎈 🎈
+    </div>
+
+
+    <div class="cake">
+
+        <div class="candle">
+            ❤️
+            <span></span>
+        </div>
+
+        <div class="cake-top"></div>
+
+        <div class="cake-mid"></div>
+
+        <div class="cake-bottom"></div>
+
+    </div>
+
+
+    <h2>
+        Happy Birthday 🎉
+    </h2>
+
+
+    <button
+        class="secondary-btn"
+        onclick="goTo('final')">
+
+        NEXT
+
+    </button>
+
+</section>
+
+
+
+<!-- =====================================================
+     9. FINAL
+===================================================== -->
+
+<section
+    class="page final-page"
+    id="final">
+
+    <div class="final-content">
+
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+
+        <h1>
+            I Love You
+        </h1>
+
+
+        <h2>
+            🎂 Happy Birthday, Kashish 🎂
+        </h2>
+
+
+        <p class="script">
+            Forever grateful that you are in my life.
+        </p>
+
+
+        <div class="final-name">
+            Kashish ♡
+        </div>
+
+
+        <button
+            class="primary-btn"
+            onclick="goTo('home')">
+
+            REPLAY
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- JavaScript -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
